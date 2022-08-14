@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 16px;
   margin: 0 auto;
   max-width: 1200px;
   box-sizing: border-box;
@@ -36,4 +36,27 @@
 }
 .header-menu a:hover::after {
   width: 100%;
+}
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+  .header-menu a:hover::after {
+    width: 0%;
+  }
+  .header-menu a {
+    border-radius: 4px;
+    padding: 8px 12px;
+  }
+  .header-menu a:hover {
+    background: #242424;
+  }
+}
+@media (max-width: 500px) {
+  .header-menu {
+    gap: 20px;
+    justify-content: center;
+  }
 }
